@@ -1,0 +1,22 @@
+  #title {
+    margin: 8px;
+    margin-top: 10px;
+    font-size: 4em; 
+    color: #ff1d58;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+}
+
+.topnav {
+    display: block;
+    overflow: hidden;
+    background-color: darksalmon;
+    height: 4em;
+    opacity: 0.9;
+}
+
+button {
+  margin: 8px;
+  float: right;
+  clear: both;
+}
