@@ -11,18 +11,15 @@ import { catchError, retry } from 'rxjs/operators';
   providers: [ LoginService ]
 })
 export class HeaderComponent implements OnInit {
-  title = 'Music Sense';
+  title = 'Test';
   constructor(private loginService: LoginService) { }
   private accessToken: any;
 
   ngOnInit(): void {
   }
 
-  loginRequest() {
-    console.log("function started \n");
-    console.log(this.accessToken);
-    this.accessToken = this.loginService.getAccessToken();
-    console.log(this.accessToken);
+  getAccessToken() {
+    this.accessToken = this.loginService.loginRequest();
   }
 
   testFunction() {
@@ -31,7 +28,7 @@ export class HeaderComponent implements OnInit {
 
   hardCode() {
     console.log("pressed");
-    window.open('https://accounts.spotify.com/authorize?client_id=b542a6a5da9c4516a9dfceae181a59bd&redirect_uri=http://localhost:4200/&scope=user-read-private%20user-read-email&response_type=token&state=123');
+    window.location.replace('https://accounts.spotify.com/authorize?client_id=b542a6a5da9c4516a9dfceae181a59bd&redirect_uri=http://localhost:4200/&scope=user-read-private%20user-read-email&response_type=token&state=123');
   }
 
 }
